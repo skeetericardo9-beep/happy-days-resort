@@ -1,0 +1,67 @@
+backend:
+  name: turbo-github
+  turbo_site_id: YOUR_DECAP_TURBO_SITE_ID
+  branch: main
+  deploy_status: false
+
+media_folder: images
+public_folder: /images
+
+collections:
+  - name: settings
+    label: Website Content
+    description: Change the words, phone numbers, logo, hero photo and gallery shown on the Happy Days Resort website.
+    files:
+      - label: Home page
+        name: home
+        file: content/site.json
+        format: json
+        fields:
+          - { label: Site Name, name: siteName, widget: string }
+          - { label: Location, name: location, widget: string }
+          - { label: Logo, name: logo, widget: image }
+          - { label: Hero Image, name: heroImage, widget: image }
+          - { label: Hero Title, name: heroTitle, widget: string }
+          - { label: Hero Text, name: heroText, widget: text }
+          - { label: Hero Button, name: heroButton, widget: string }
+          - { label: Call Button, name: callButton, widget: string }
+          - { label: Where Text, name: where, widget: string }
+          - { label: Stay Summary, name: staySummary, widget: string }
+          - { label: Experience Text, name: experience, widget: string }
+          - { label: Search Button, name: searchButton, widget: string }
+          - { label: Rooms Title, name: roomsTitle, widget: string }
+          - { label: Rooms Text, name: roomsText, widget: text }
+          - label: Stay Types
+            name: stays
+            widget: list
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Description, name: description, widget: string }
+          - { label: Gallery Title, name: galleryTitle, widget: string }
+          - { label: Gallery Text, name: galleryText, widget: text }
+          - label: Gallery Photos
+            name: gallery
+            widget: list
+            fields:
+              - { label: Photo, name: image, widget: image }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Accessibility Text, name: alt, widget: string }
+          - { label: About Title, name: aboutTitle, widget: string }
+          - { label: About Text, name: aboutText, widget: text }
+          - label: About Bullet Points
+            name: aboutBullets
+            widget: list
+            field: { label: Bullet, widget: string }
+          - { label: Enquiry Box Title, name: enquiryTitle, widget: string }
+          - { label: Enquiry Box Text, name: enquiryText, widget: text }
+          - { label: Contact Title, name: contactTitle, widget: string }
+          - { label: Contact Text, name: contactText, widget: text }
+          - { label: Phone 1 Display, name: phone1, widget: string }
+          - { label: Phone 1 Link, name: phone1Tel, widget: string }
+          - { label: Phone 2 Display, name: phone2, widget: string }
+          - { label: Phone 2 Link, name: phone2Tel, widget: string }
+          - { label: WhatsApp Number, name: whatsappNumber, widget: string }
+          - { label: Footer Text, name: footer, widget: string }
+          - { label: Enquiry Popup Title, name: modalTitle, widget: string }
+          - { label: Enquiry Popup Text, name: modalText, widget: text }

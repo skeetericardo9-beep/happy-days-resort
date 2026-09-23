@@ -1,0 +1,100 @@
+HAPPY DAYS RESORT — EASY EDITABLE WEBSITE
+
+WHAT THIS PACKAGE DOES
+----------------------
+This is the Happy Days Resort website with a simple content editor.
+You can change the words, phone numbers, logo, hero picture and gallery pictures without editing the HTML.
+
+IMPORTANT
+---------
+The easiest long-term setup is:
+  1. GitHub = stores the website
+  2. Netlify = hosts the website
+  3. Decap CMS = gives you an /admin/ editor
+
+All three can be used with free tiers. Decap Turbo's current free plan is one site and one seat. The CMS uses your GitHub repository as the content store.
+
+FIRST-TIME SETUP
+----------------
+1. Create a free GitHub account:
+   https://github.com/
+
+2. Create a NEW repository named:
+   happy-days-resort
+   For the simplest setup, make it PUBLIC. Do not add a README or other files because this package already contains the site.
+
+3. Upload ALL files and folders in this package to the repository. The repository should have:
+   index.html
+   netlify.toml
+   content/site.json
+   admin/index.html
+   admin/config.yml
+   images/...
+
+4. Deploy it with Netlify:
+   https://app.netlify.com/
+   Choose Add new project -> Import an existing project -> GitHub.
+   Select your happy-days-resort repository and publish it.
+   Netlify will give you a live website address ending in .netlify.app.
+
+5. Set up the free Decap Turbo editor:
+   https://decapcms.org/turbo/
+   Create an account and a free organization.
+   Connect the GitHub account that owns your repository.
+   Create a site in Turbo using:
+      Git provider: GitHub
+      Repo: YOUR_GITHUB_USERNAME/happy-days-resort
+      Branch: main
+      Config path: admin/config.yml
+      Admin interface URL: https://YOUR-NETLIFY-SITE.netlify.app/admin/
+
+6. Turbo will show a Site ID (UUID) on the site's Overview page.
+
+7. Edit this file in GitHub:
+   admin/config.yml
+   Find:
+      turbo_site_id: YOUR_DECAP_TURBO_SITE_ID
+   Replace it with your real Turbo Site ID.
+   Save/commit the file.
+
+8. Netlify will automatically redeploy the site.
+
+HOW TO EDIT THE WEBSITE AFTER THAT
+----------------------------------
+Open:
+   https://YOUR-NETLIFY-SITE.netlify.app/admin/
+
+Log in to Decap Turbo.
+Open "Website Content" -> "Home page".
+
+You can then change:
+  • Words and headings
+  • Phone numbers
+  • Logo
+  • Main/hero picture
+  • Gallery pictures
+  • Gallery titles and descriptions
+  • Stay types
+  • WhatsApp number
+  • Contact wording
+
+For pictures, use the image picker/upload button. Save/publish the change.
+Netlify then rebuilds the website from the GitHub update.
+
+ADDING A NEW GALLERY PHOTO
+--------------------------
+In the editor, open Gallery Photos and add an item.
+Upload/select the picture, give it a title and description, then publish.
+
+CHANGING THE WEBSITE ADDRESS
+----------------------------
+In Netlify you can change the free netlify.app site name if the name you want is available.
+You can also connect a custom domain later.
+
+MOBILE USE
+----------
+The live website and the editor are browser-based, so you can manage the site from your phone. A computer is more comfortable for the first-time GitHub/Netlify setup.
+
+NOTE ABOUT THE FREE PLAN
+------------------------
+Netlify currently lists a $0/month Free plan. Decap Turbo currently lists a €0 Free plan with one site and one seat, while its hosted Turbo backends are still in preview. If Turbo is unavailable to your account, tell me and I can switch this package to another Decap authentication setup.
